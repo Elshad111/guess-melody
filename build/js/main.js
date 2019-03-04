@@ -1,5 +1,7 @@
 'use strict';
 (function(){
+	const ARROW_RIGHT = 39;
+	const ARROW_LEFT = 37;
 	const app = document.querySelector('.app');
 	const main = app.querySelector('.main');
 	const template = document.querySelector('#templates').content.children;
@@ -52,5 +54,15 @@
     const rightArrow = document.querySelectorAll('.arrows__btn')[1];
 
     leftArrow.addEventListener('click', leftArrowHandler);
+    document.addEventListener('keydown', function(evt){
+    	if(evt.keyCode === ARROW_LEFT){
+    		leftArrowHandler();
+    	}
+    });
     rightArrow.addEventListener('click', rightArrowHandler);
+    document.addEventListener('keydown', function(evt){
+    	if(evt.keyCode === ARROW_RIGHT){
+    		rightArrowHandler();
+    	}
+    });
 })();
