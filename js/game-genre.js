@@ -1,4 +1,5 @@
-const gameGenre = `  <section class="main main--level main--level-genre">
+import {render} from './util.js';
+const gameGenre =  render(`<section class="main main--level main--level-genre">
     <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
       <circle
         cx="390" cy="390" r="370"
@@ -79,4 +80,6 @@ const gameGenre = `  <section class="main main--level main--level-genre">
         <button class="genre-answer-send" type="submit">Ответить</button>
       </form>
     </div>
-  </section>`;
+  </section>`);
+
+export {gameGenre};

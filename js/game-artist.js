@@ -1,4 +1,5 @@
-const gameArtist = `<section class="main main--level main--level-artist">
+export {render} from './util.js';
+const gameArtist = render(`<section class="main main--level main--level-artist">
     <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
       <circle
         cx="390" cy="390" r="370"
@@ -56,4 +57,6 @@ const gameArtist = `<section class="main main--level main--level-artist">
         </div>
       </form>
     </div>
-  </section>`;
+  </section>`);
+
+export {gameArtist};

@@ -1,5 +1,5 @@
-import {render, changeScreen} from 'js/util.js';
-const welcomeScreen = `<section class="main main--welcome">
+import {render, changeScreen} from './util.js';
+const welcomeScreen = render(`<section class="main main--welcome">
 	<section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
 	<button class="main-play">Начать игру</button>
 	<h2 class="title main-title">Правила игры</h2>
@@ -8,8 +8,7 @@ const welcomeScreen = `<section class="main main--welcome">
 	  Ошибиться можно 3 раза.<br>
 	  Удачи!
 	</p>
- </section>`;
+ </section>`);
 
-const element = render(welcomeScreen);
+export {welcomeScreen};
 
-changeScreen(element);

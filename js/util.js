@@ -4,10 +4,10 @@ export const render = (template) => {
 	return div;
 };
 
-const main = document.querySelector('#main');
+const main = document.querySelector('.main');
 
 export const changeScreen = (element) => {
 	main.innerHTML = ``;
-	main.innerHTML = element;
+	main.appendChild(element.childNodes[0]);
 }; 
 
