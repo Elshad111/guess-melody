@@ -1,4 +1,5 @@
 import {render} from './util.js';
+
 const failTries = render(`<section class="main main--result">
     <section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
     <h2 class="title">Какая жалость!</h2>

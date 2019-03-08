@@ -1,4 +1,5 @@
 import {render} from './util.js';
+
 const failTime = `<section class="main main--result">
     <section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
     <h2 class="title">Увы и ах!</h2>

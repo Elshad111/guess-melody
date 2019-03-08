@@ -1,4 +1,5 @@
 import {render, changeScreen} from './util.js';
+
 const welcomeScreen = render(`<section class="main main--welcome">
 	<section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
 	<button class="main-play">Начать игру</button>
