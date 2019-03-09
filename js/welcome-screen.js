@@ -1,4 +1,5 @@
-import {render} from './util.js';
+import {render, changeScreen} from './util.js';
+import {gameGenre} from './game-genre.js';
 
 const welcomeScreen = render(`<section class="main main--welcome">
 	<section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
@@ -10,5 +11,10 @@ const welcomeScreen = render(`<section class="main main--welcome">
 	  Удачи!
 	</p>
 </section>`);
+
+const mainPlay = welcomeScreen.querySelector('.main-play');
+mainPlay.addEventListener('click', function(){
+	changeScreen(gameGenre);
+});
 
 export {welcomeScreen};

@@ -83,12 +83,4 @@ const gameGenre =  render(`<section class="main main--level main--level-genre">
     </div>
   </section>`);
 
-const changeTemplate = (evt) => {
-    if(evt.target.classList.contains('main-play')) {
-      changeScreen(gameGenre);
-      document.removeEventListener('click', changeTemplate);
-    }  
-};
-document.addEventListener('click', changeTemplate);
-
 export {gameGenre};

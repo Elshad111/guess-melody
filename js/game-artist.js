@@ -56,21 +56,4 @@ const gameArtist = render(`<section class="main main--level main--level-artist">
     </div>
 </section>`);
 
-const checkAnswer = (evt) => {
-  if(evt.target.classList.contains('genre-answer-check')){
-    document.querySelector('.genre-answer-send').removeAttribute('disabled');
-    document.removeEventListener('click', checkAnswer);
-  }
-};
-
-const changeTemplate = (evt) => {
-  if(evt.target.classList.contains('genre-answer-send')){
-    changeScreen(gameArtist);
-    document.removeEventListener('click', changeTemplate);
-  }
-};
-
-document.addEventListener('click', changeTemplate);
-document.addEventListener('click', checkAnswer);
-
 export {gameArtist};
