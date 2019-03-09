@@ -78,9 +78,17 @@ const gameGenre =  render(`<section class="main main--level main--level-genre">
           <label class="genre-answer-check" for="a-4"></label>
         </div>
 
-        <button class="genre-answer-send" type="submit">Ответить</button>
+        <button class="genre-answer-send" type="submit" disabled="disabled">Ответить</button>
       </form>
     </div>
   </section>`);
+
+const changeTemplate = (evt) => {
+    if(evt.target.classList.contains('main-play')) {
+      changeScreen(gameGenre);
+      document.removeEventListener('click', changeTemplate);
+    }  
+};
+document.addEventListener('click', changeTemplate);
 
 export {gameGenre};
