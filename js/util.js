@@ -9,5 +9,7 @@ const main = document.querySelector('.main');
 export const changeScreen = (element) => {
 	main.innerHTML = ``;
 	main.appendChild(element.childNodes[0]);
+	callback;
 }; 
+
 
