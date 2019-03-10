@@ -107,4 +107,8 @@ genre.addEventListener('change', () => {
   }
 });
 
+genreAnswerSend.addEventListener('click', () => {
+  changeScreen(gameArtist);
+});
+
 export {gameGenre};
