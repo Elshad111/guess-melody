@@ -1,4 +1,5 @@
 import {render, changeScreen} from './util.js';
+import {gameArtist} from './game-artist.js';
 
 const gameGenre =  render(`<section class="main main--level main--level-genre">
     <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
@@ -82,5 +83,28 @@ const gameGenre =  render(`<section class="main main--level main--level-genre">
       </form>
     </div>
   </section>`);
+
+const genreAnswerSend = gameGenre.querySelector('.genre-answer-send');
+const genreAnswerCheck = gameGenre.querySelectorAll('input[type=checkbox]');
+const genre = gameGenre.querySelector('.genre');
+
+const checkInput = (array) => {
+  let flag = false;
+  for(var i = 0; i < array.length; i++){
+    if(array[i].checked){
+      flag = true;
+      break;
+    }
+  }
+  return flag;
+};
+
+genre.addEventListener('change', () => {
+  if(checkInput(genreAnswerCheck)){
+    genreAnswerSend.disabled = '';
+  }else{
+    genreAnswerSend.disabled = 'disabled';
+  }
+});
 
 export {gameGenre};
