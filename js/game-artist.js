@@ -1,5 +1,7 @@
 import {render, changeScreen} from './util.js';
 import {resultSuccess} from './result-success.js';
+import {failTime} from './fail-time.js';
+import {failTries} from './fail-tries.js';
 
 const gameArtist = render(`<section class="main main--level main--level-artist">
     <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
@@ -58,10 +60,14 @@ const gameArtist = render(`<section class="main main--level main--level-artist">
 </section>`);
 
 const mainAnswerWrapper = gameArtist.querySelectorAll('.main-answer-wrapper');
+const getRandom = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+const arrayTemplate = [resultSuccess, failTime, failTries];
 
 mainAnswerWrapper.forEach( (item) => {
   item.addEventListener('click', () => {
-    changeScreen(resultSuccess);
+    changeScreen(arrayTemplate[0, 2]);
   });
 });
 export {gameArtist};
