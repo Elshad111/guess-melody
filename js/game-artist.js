@@ -63,11 +63,11 @@ const mainAnswerWrapper = gameArtist.querySelectorAll('.main-answer-wrapper');
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-const arrayTemplate = [resultSuccess, failTime, failTries];
+const arrayTemplate = [failTime, failTries, resultSuccess];
 
 mainAnswerWrapper.forEach( (item) => {
   item.addEventListener('click', () => {
-    changeScreen(arrayTemplate[0, 2]);
+    changeScreen(arrayTemplate[getRandom(0, 2)]);
   });
 });
 export {gameArtist};
