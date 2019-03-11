@@ -1,4 +1,5 @@
-import {render} from './util.js';
+import {render, changeScreen} from './util.js';
+import {welcomeScreen} from './welcome-screen.js';
 
 const resultSuccess = render(`<section class="main main--result">
     <section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
@@ -9,5 +10,10 @@ const resultSuccess = render(`<section class="main main--result">
     <span class="main-comparison">Вы заняли 2 место из 10. Это&nbsp;лучше чем у&nbsp;80%&nbsp;игроков</span>
     <span role="button" tabindex="0" class="main-replay">Сыграть ещё раз</span>
   </section>`);
+
+const mainReplay = resultSuccess.querySelector('.main-replay');
+mainReplay.addEventListener('click', () => {
+	changeScreen(welcomeScreen);
+});
 
 export {resultSuccess};

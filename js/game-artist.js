@@ -1,4 +1,5 @@
 import {render, changeScreen} from './util.js';
+import {resultSuccess} from './result-success.js';
 
 const gameArtist = render(`<section class="main main--level main--level-artist">
     <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
@@ -56,4 +57,11 @@ const gameArtist = render(`<section class="main main--level main--level-artist">
     </div>
 </section>`);
 
+const mainAnswerWrapper = gameArtist.querySelectorAll('.main-answer-wrapper');
+
+mainAnswerWrapper.forEach( (item) => {
+  item.addEventListener('click', () => {
+    changeScreen(resultSuccess);
+  });
+});
 export {gameArtist};
