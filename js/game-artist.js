@@ -3,8 +3,7 @@ import {resultSuccess} from './result-success.js';
 import {failTime} from './fail-time.js';
 import {failTries} from './fail-tries.js';
 
-const gameArtist = render(`<section class="main main--level main--level-artist">
-    <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
+const svgTimer = ` <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
       <circle
         cx="390" cy="390" r="370"
         class="timer-line"
@@ -14,23 +13,14 @@ const gameArtist = render(`<section class="main main--level main--level-artist">
         --><span class="timer-value-dots">:</span><!--
         --><span class="timer-value-secs">00</span>
       </div>
-    </svg>
-    <div class="main-mistakes">
+    </svg>`;
+
+const mistakes = `<div class="main-mistakes">
       <img class="main-mistake" src="img/wrong-answer.png" width="35" height="49">
       <img class="main-mistake" src="img/wrong-answer.png" width="35" height="49">
-    </div>
-    <div class="main-wrap">
-      <h2 class="title main-title">Кто исполняет эту песню?</h2>
-      <div class="player-wrapper">
-        <div class="player">
-          <audio></audio>
-          <button class="player-control player-control--pause"></button>
-          <div class="player-track">
-            <span class="player-status"></span>
-          </div>
-        </div>
-      </div>
-      <form class="main-list">
+    </div>`; 
+
+const formList = ` <form class="main-list">
         <div class="main-answer-wrapper">
           <input class="main-answer-r" type="radio" id="answer-1" name="answer" value="val-1"/>
           <label class="main-answer" for="answer-1">
@@ -55,7 +45,23 @@ const gameArtist = render(`<section class="main main--level main--level-artist">
             Lorde
           </label>
         </div>
-      </form>
+      </form>`;
+
+const gameArtist = render(`<section class="main main--level main--level-artist">
+    ${svgTimer}
+    ${mistakes}
+    <div class="main-wrap">
+      <h2 class="title main-title">Кто исполняет эту песню?</h2>
+      <div class="player-wrapper">
+        <div class="player">
+          <audio></audio>
+          <button class="player-control player-control--pause"></button>
+          <div class="player-track">
+            <span class="player-status"></span>
+          </div>
+        </div>
+      </div>
+      ${formList}
     </div>
 </section>`);
 
