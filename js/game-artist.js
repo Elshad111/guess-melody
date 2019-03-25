@@ -2,6 +2,15 @@ import {render, changeScreen} from './util.js';
 import {resultSuccess} from './result-success.js';
 import {failTime} from './fail-time.js';
 import {failTries} from './fail-tries.js';
+import {initialState} from './game-genre.js';
+// const levelss = {
+//   'quastion' : 'Кто исполняет эту песню?',
+//   'answer' : {
+//     'Пелагея' : initialState.mistake = ++count,
+//     'Краснознаменная дивизия имени моей бабушки' : initialState.mistake = ++count,
+//     'Lorde' : initialState.mistake = ++pointCount
+//   }
+// };
 
 const svgTimer = ` <svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
       <circle

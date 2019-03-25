@@ -1,6 +1,27 @@
 import {render, changeScreen} from './util.js';
 import {gameArtist} from './game-artist.js';
 
+let count = 0;
+let pointCount = 0;
+
+const initialState = {
+  mistake: 0,
+  timer: 50000,
+  points: 0
+};
+
+const levels = {
+  'quastion' : 'Выберите инди-рок треки',
+  'answers' : {
+    'a-1' : initialState.points = ++pointCount,
+    'a-2' : initialState.mistake = ++count,
+    'a-3' : initialState.mistake = ++count,
+    'a-4' : initialState.mistake = ++count
+  }
+};
+
+
+
 const svgTimer = `<svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
       <circle
         cx="390" cy="390" r="370"
@@ -111,4 +132,4 @@ genreAnswerSend.addEventListener('click', () => {
   changeScreen(gameArtist);
 });
 
-export {gameGenre};
+export {gameGenre, initialState};
