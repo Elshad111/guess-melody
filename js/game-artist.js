@@ -2,7 +2,7 @@ import {render, changeScreen} from './util.js';
 import {resultSuccess} from './result-success.js';
 import {failTime} from './fail-time.js';
 import {failTries} from './fail-tries.js';
-import {initialState} from './game-genre.js';
+
 // const levelss = {
 //   'quastion' : 'Кто исполняет эту песню?',
 //   'answer' : {

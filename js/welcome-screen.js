@@ -12,8 +12,15 @@ const welcomeScreen = render(`<section class="main main--welcome">
 	</p>
 </section>`);
 
+const playerControl = gameGenre.querySelectorAll('.player-control');
+
 const mainPlay = welcomeScreen.querySelector('.main-play');
 mainPlay.addEventListener('click', function(){
+	if(playerControl[0].classList.contains('player-control--pause')){
+		const item = playerControl[0];
+		item.previousElementSibling.play();
+		item.click();
+	}
 	changeScreen(gameGenre);
 });
 

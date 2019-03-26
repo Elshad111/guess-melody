@@ -1,25 +1,7 @@
 import {render, changeScreen} from './util.js';
 import {gameArtist} from './game-artist.js';
-
-let count = 0;
-let pointCount = 0;
-
-const initialState = {
-  mistake: 0,
-  timer: 50000,
-  points: 0
-};
-
-const levels = {
-  'quastion' : 'Выберите инди-рок треки',
-  'answers' : {
-    'a-1' : initialState.points = ++pointCount,
-    'a-2' : initialState.mistake = ++count,
-    'a-3' : initialState.mistake = ++count,
-    'a-4' : initialState.mistake = ++count
-  }
-};
-
+import {initialState} from './constants/constants.js';
+console.log(initialState);
 
 
 const svgTimer = `<svg xmlns="http://www.w3.org/2000/svg" class="timer" viewBox="0 0 780 780">
@@ -44,7 +26,7 @@ const formGenre = `<form class="genre">
         <div class="genre-answer">
           <div class="player-wrapper">
             <div class="player">
-              <audio></audio>
+              <audio src="https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7"></audio>
               <button class="player-control player-control--pause"></button>
               <div class="player-track">
                 <span class="player-status"></span>
@@ -57,7 +39,7 @@ const formGenre = `<form class="genre">
         <div class="genre-answer">
           <div class="player-wrapper">
             <div class="player">
-              <audio></audio>
+              <audio src="https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7"></audio>
               <button class="player-control player-control--play"></button>
               <div class="player-track">
                 <span class="player-status"></span>
@@ -70,7 +52,7 @@ const formGenre = `<form class="genre">
         <div class="genre-answer">
           <div class="player-wrapper">
             <div class="player">
-              <audio></audio>
+              <audio src="https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7"></audio>
               <button class="player-control player-control--play"></button>
               <div class="player-track">
                 <span class="player-status"></span>
@@ -83,7 +65,7 @@ const formGenre = `<form class="genre">
         <div class="genre-answer">
           <div class="player-wrapper">
             <div class="player">
-              <audio></audio>
+              <audio src="https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7"></audio>
               <button class="player-control player-control--play"></button>
               <div class="player-track">
                 <span class="player-status"></span>
@@ -132,4 +114,6 @@ genreAnswerSend.addEventListener('click', () => {
   changeScreen(gameArtist);
 });
 
-export {gameGenre, initialState};
+export {gameGenre};
+
+

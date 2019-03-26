@@ -1,6 +1,5 @@
 import {render, changeScreen} from './util.js';
 import {welcomeScreen} from './welcome-screen.js';
-import {initialState} from './game-genre.js';
 
 const resultSuccess = render(`<section class="main main--result">
     <section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
