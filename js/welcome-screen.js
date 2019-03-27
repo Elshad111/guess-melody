@@ -1,5 +1,5 @@
 import {render, changeScreen} from './util.js';
-import {gameGenre} from './game-genre.js';
+import {renderScreen} from './game-genre.js';
 
 const welcomeScreen = render(`<section class="main main--welcome">
 	<section class="logo" title="Угадай мелодию"><h1>Угадай мелодию</h1></section>
@@ -12,16 +12,16 @@ const welcomeScreen = render(`<section class="main main--welcome">
 	</p>
 </section>`);
 
-const playerControl = gameGenre.querySelectorAll('.player-control');
+//const playerControl = gameGenre.querySelectorAll('.player-control');
 
 const mainPlay = welcomeScreen.querySelector('.main-play');
 mainPlay.addEventListener('click', function(){
-	if(playerControl[0].classList.contains('player-control--pause')){
-		const item = playerControl[0];
-		item.previousElementSibling.play();
-		item.click();
-	}
-	changeScreen(gameGenre);
+	// if(playerControl[0].classList.contains('player-control--pause')){
+	// 	const item = playerControl[0];
+	// 	item.previousElementSibling.play();
+	// 	item.click();
+	// }
+	changeScreen(renderScreen);
 });
 
 export {welcomeScreen};
