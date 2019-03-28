@@ -125,13 +125,8 @@ genre.addEventListener('change', () => {
   }
 });
 
-const renderScreen = () => {
-
-}
-
 genreAnswerSend.addEventListener('click', () => {
-  
-  //changeScreen(gameArtist);
+  changeScreen(gameArtist);
 });
 
 export {gameGenre};
